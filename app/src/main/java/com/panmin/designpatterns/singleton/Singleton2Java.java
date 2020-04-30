@@ -8,6 +8,7 @@ import android.util.Log;
  * 缺点：由于使用了synchronized，会导致每次进入这个方法都被锁定，影响性能
  */
 public class Singleton2Java {
+    private Singleton2Java(){}
     private static Singleton2Java mInstance;
 
     public static synchronized Singleton2Java getInstance() {

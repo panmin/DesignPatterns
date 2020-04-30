@@ -8,6 +8,7 @@ import android.util.Log;
  * 缺点：首次加载速度慢
  */
 public class Singleton3Java {
+    private Singleton3Java(){}
     private static Singleton3Java mInstance;
 
     public static Singleton3Java getInstance() {

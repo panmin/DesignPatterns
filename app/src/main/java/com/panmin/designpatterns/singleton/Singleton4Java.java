@@ -4,12 +4,11 @@ import android.util.Log;
 
 /**
  * 静态内部类
- * 优点：利用JVM的机制，在运行时会初始化静态内部类的静态成员，这时还没有调用getInstance方法
- * 缺点：初始化时间比较早，不能延迟加载
+ * 优点：第一次getInstance时才会加载内部类，能够延迟加载，不会产生多线程问题
+ * 缺点：第一次getInstance时耗时
  */
 public class Singleton4Java {
-    private static Singleton4Java mInstance;
-
+    private Singleton4Java(){}
     public static Singleton4Java getInstance() {
         return SingletonHolder.singletonHolder;
     }

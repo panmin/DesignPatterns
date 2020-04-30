@@ -8,6 +8,7 @@ import android.util.Log;
  * 缺点：无法延迟加载、多线程会产生多个对象
  */
 public class Singleton1Java {
+    private Singleton1Java(){}
     private static Singleton1Java mInstance = new Singleton1Java();
     public static Singleton1Java getInstance(){
         return mInstance;
